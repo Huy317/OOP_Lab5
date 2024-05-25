@@ -21,7 +21,11 @@ public class TeachingAssistant extends Staff {
         subjectsCount = sc.nextInt();
         sc.nextLine();
     }
-
+    @Override
+    public void Edit(){
+        super.Edit();
+        Input();
+    }
     @Override
     public double getSalary() {
         return (double)subjectsCount * 0.3d * 18000;
