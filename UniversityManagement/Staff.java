@@ -1,8 +1,8 @@
 package UniversityManagement;
-
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Staff {
+public class Staff implements Serializable {
     protected String fullName;
     protected String dob;
     protected String id;
@@ -24,6 +24,9 @@ public class Staff {
     }
     public String getId(){
         return id;
+    }
+    public void Edit(){
+        Input();
     }
     public double getSalary(){
         return 0;

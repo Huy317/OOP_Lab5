@@ -24,6 +24,6 @@ public class TeachingAssistant extends Staff {
 
     @Override
     public double getSalary() {
-        return (double)subjectsCount * 0.3d * 18000d;
+        return (double)subjectsCount * 0.3d * 18000;
     }
 }
