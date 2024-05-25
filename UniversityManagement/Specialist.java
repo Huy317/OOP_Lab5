@@ -28,6 +28,11 @@ public class Specialist extends Staff {
         sc.nextLine();
     }
     @Override
+    public void Edit(){
+        super.Edit();
+        Input();
+    }
+    @Override
     public double getSalary() {
         int count = 0;
         for (String code : projectCode){
