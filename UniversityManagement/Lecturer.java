@@ -41,7 +41,6 @@ public class Lecturer extends Staff {
     }
     @Override
     public void Edit() {
-        super.Edit();
         Input();
     }
     @Override

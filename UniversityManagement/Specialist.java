@@ -29,7 +29,6 @@ public class Specialist extends Staff {
     }
     @Override
     public void Edit(){
-        super.Edit();
         Input();
     }
     @Override

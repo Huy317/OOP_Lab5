@@ -74,8 +74,12 @@ public class StaffManager {
         try{
             FileOutputStream f = new FileOutputStream("D:\\Top3HighestPaid.eiu");
             ObjectOutputStream oStream = new ObjectOutputStream(f);
-            for (int i = 0; i < 3; i++){
-                oStream.writeObject(list.get(i));
+            int counter = 3;
+            for (Staff st : list){
+                if (counter > 0){
+                    oStream.writeObject(st);
+                    counter--;
+                }
             }
             oStream.close();
         }catch(IOException e){

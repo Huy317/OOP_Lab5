@@ -23,7 +23,6 @@ public class TeachingAssistant extends Staff {
     }
     @Override
     public void Edit(){
-        super.Edit();
         Input();
     }
     @Override

@@ -51,6 +51,7 @@ public class Main {
                     break;
                 }
                 case 5: {
+                    System.out.print("Enter id to edit: ");
                     String id = sc.nextLine();
                     Staff staff = manager.searchById(id);
                     if (staff != null){
