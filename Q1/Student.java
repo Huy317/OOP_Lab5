@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class Student implements Serializable {
-
+    
 
     protected String studentNumber;
     protected String fullName;
