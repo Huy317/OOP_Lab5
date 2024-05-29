@@ -1,6 +1,5 @@
 package UniversityManagement;
 
-import java.util.Scanner;
 
 public class TeachingAssistant extends Staff {
     private int subjectsCount;
@@ -16,10 +15,8 @@ public class TeachingAssistant extends Staff {
     @Override
     public void Input() {
         super.Input();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter subjects count: ");
-        subjectsCount = sc.nextInt();
-        sc.nextLine();
+        AskInput input = new AskInput();
+        subjectsCount = input.askInt("Enter subjects count: ");
     }
     @Override
     public void Edit(){

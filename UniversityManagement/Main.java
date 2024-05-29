@@ -2,7 +2,6 @@ package UniversityManagement;
 
 import java.util.Scanner;
 
-// TODO: try catch input error
 public class Main {
     public static void main(String[] args) {
         StaffManager manager = new StaffManager();

@@ -1,7 +1,6 @@
 package UniversityManagement;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Researcher extends Staff {
     private ArrayList<String> projectCode = new ArrayList<String>();
@@ -16,17 +15,13 @@ public class Researcher extends Staff {
     @Override
     public void Input(){
         super.Input();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of projects: ");
-        int n = sc.nextInt();
-        sc.nextLine();
+        AskInput input = new AskInput();
+        int n = input.askInt("Enter number of projects: ");
         for (int i = 0; i < n; i++){
-            System.out.print("Enter project code: ");
-            projectCode.add(sc.nextLine());
+           String pj = input.askString("Enter project code: ");
+            projectCode.add(pj);
         }
-        System.out.print("Enter year of exp: ");
-        yearOfExp = sc.nextInt();
-        sc.nextLine();
+        yearOfExp = input.askInt("Enter year of experience: ");
     }
     @Override
     public void Edit(){

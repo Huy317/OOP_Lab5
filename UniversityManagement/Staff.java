@@ -1,6 +1,5 @@
 package UniversityManagement;
 import java.io.Serializable;
-import java.util.Scanner;
 
 public class Staff implements Serializable {
     protected String fullName;
@@ -14,13 +13,10 @@ public class Staff implements Serializable {
         this.id = id;
     }
     public void Input(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Full Name: ");
-        fullName = sc.nextLine();
-        System.out.print("Enter Date of Birth: ");
-        dob = sc.nextLine();
-        System.out.print("Enter ID: ");
-        id = sc.nextLine();
+        AskInput input = new AskInput();
+        fullName = input.askString("Enter Full Name: ");
+        dob = input.askString("Enter Date of Birth: ");
+        id = input.askString("Enter ID: ");
     }
     public String getId(){
         return id;

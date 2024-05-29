@@ -23,20 +23,14 @@ public class Lecturer extends Staff {
     @Override
     public void Input() {
         super.Input();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter academic rank: ");
-        academicRank = sc.nextLine();
-        System.out.print("Enter academic degree: ");
-        academicDegree = sc.nextLine();
-        System.out.print("Enter year of experience: ");
-        yearOfExp = sc.nextInt();
-        sc.nextLine();
-        System.out.print("Enter number of subjects: ");
-        subjectsCount = sc.nextInt();
-        sc.nextLine();
+        AskInput input = new AskInput();
+        academicRank = input.askString("Enter academic rank: ");
+        academicDegree = input.askString("Enter academic degree: ");
+        yearOfExp = input.askInt("Enter year of experience: ");
+        subjectsCount = input.askInt("Enter number of subjects: ");
         for (int i = 0; i < subjectsCount; i++) {
-            System.out.print("Enter subject " + (i + 1) + ": ");
-            subjects.add(sc.nextLine());
+            String a = input.askString("Enter subject " + (i + 1) + ": ");
+            subjects.add(a);
         }
     }
     @Override
